@@ -25,7 +25,7 @@ public class EntityTrackerEntryMixin {
         this.tickInterval = 1;
     }
 
-    @Redirect(method = "sendPackets", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;createSpawnPacket()Lnet/minecraft/network/packet/Packet;"))
+    @Redirect(method = "sendPackets", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;createSpawnPacket(Lnet/minecraft/server/network/EntityTrackerEntry;)Lnet/minecraft/network/packet/Packet;"))
     private Packet<?> createStandardPacket(Entity instance, EntityTrackerEntry entry) {
         return new EntitySpawnS2CPacket(instance, entry);
     }
