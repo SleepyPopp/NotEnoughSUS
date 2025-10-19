@@ -72,7 +72,7 @@ public abstract class EntityMixin implements PolymerEntity, PolymerKeepModel {
         }
     }
 
-    @Inject(method = "readNbt", at = @At("TAIL"))
+    @Inject(method = "readComponents", at = @At("TAIL"))
     private void updateSize2(NbtCompound nbt, CallbackInfo ci) {
         if (model != null) {
             this.model.setSize(this.getDimensions(this.getPose()));
