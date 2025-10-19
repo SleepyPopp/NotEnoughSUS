@@ -3,6 +3,8 @@ https://youtu.be/6FYKCvCjWcs
 
 
 # Not Enough SUS 
+![icon.png](icon.png)
+
 The most ambitious and cutting edge Fabric/Quilt Server Side™ modification, that will change
 the modding scene forever.
 
